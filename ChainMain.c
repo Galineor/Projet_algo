@@ -1,32 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 #include "entree_sortie.h"
 #include "Chaine.h"
+#include "ArbreQuat.h"
 
 int main(){
 	FILE* f = fopen("00014_burma.cha", "r");
-	
-	Chaines* C = lectureChaine(f);
-	
-	fclose(f);
-	
-	/*afficher_Chaines(C);
 
-	
-	FILE* f2 = fopen("test.txt", "w");
+	//printf("main : ouverture fichier\n\n");
+	Chaines* C = lectureChaine(f);
+
+	//printf("main : creation Chaines\n");
+	fclose(f);
+
+	//printf("main : fermeture fichier\n");
+
+	//afficher_Chaines(C);
+
+	FILE* f2 = fopen("Chaine.txt", "w");
 	ecrireChaineTxt(C, f2);
 	printf("fin ecriture Chaines\n");
 	fclose(f2);
 
-	//printf("longueur chaine %f\n", longueurChaine (C->chaines));
-	printf("longueur Chaines %f\n", longueurTotale(C));
-	printf("Points total de C : %d\n", comptePointsTotal(C));
-	*/
+	afficheChaineSVG(C, "Chaine");
 
-	afficheChaineSVG(C, "test");
-	printf("fin afficheChaineSVG\n");
-
+	printf("longueur chaine %f\n", longueurChaine (C->chaines));
+	//printf("main : fin affichage\n");
 	return 0;
 }

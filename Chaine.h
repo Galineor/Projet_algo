@@ -1,5 +1,5 @@
 #ifndef __CHAINE_H__
-#define __CHAINE_H__	
+#define __CHAINE_H__
 #include <stdio.h>
 #include <math.h>
 #include "SVGwriter.h"
@@ -49,4 +49,4 @@ double longueurTotale(Chaines *C);
 
 int comptePointsTotal(Chaines *C);
 
-#endif	
+#endif

@@ -38,5 +38,19 @@ void ecrireReseauTxt(Reseau *R, FILE *f);
 int nbLiaison(Reseau *R);
 int nbCommodite(Reseau *R);
 void afficheReseauSVG(Reseau *R, char* nomInstance);
-#endif
 
+Noeud * creer_noeud(int num, double x, double y);
+CellNoeud * creer_CellNoeud(Noeud * n);
+CellCommodite * creer_commodite(Noeud * a, Noeud * b);
+Reseau * creer_reseau_vide();
+void ajouter_voisins(Noeud * n, CellNoeud * voisin);
+void afficher_noeud(Noeud * n, int afficheVoisins);
+void afficher_reseau(Reseau * R);
+void reseau_min_max (Reseau* R, double* xmin, double* ymin, double* xmax, double* ymax);
+
+void liberer_un_noeud(Noeud * n);
+void liberer_liste_noeud(CellNoeud * ln);
+void liberer_liste_commodites( CellCommodite * cm);
+void liberer_reseau(Reseau * r);
+
+#endif
